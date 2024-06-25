@@ -2,6 +2,19 @@ let num1;
 let num2;
 let operator;
 
+let firstRow = document.querySelector(".first");
+let middleRows = document.querySelectorAll(".middle");
+let lastRow = document.querySelector(".last");
+
+// Add cells to last row of calculator
+let newCell;
+
+for (let i = 0; i < 4; i++) {
+    newCell = document.createElement("div");
+    newCell.className = "cell";
+    lastRow.appendChild(newCell);
+}
+
 function add(num1, num2) {
     return num1 + num2;
 }
