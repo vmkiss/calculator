@@ -31,10 +31,19 @@ function divide(num1, num2) {
     }
 }
 
-console.log(add(3, 13));
-console.log(subtract(13, 3));
-console.log(subtract(3, 13));
-console.log(multiply(3, 13));
-console.log(divide(3, 13))
-console.log(divide(13, 3))
-console.log(divide(13, 0))
+function operate(num1, num2, operator) {
+    if (operator === "plus") {
+        return add(num1, num2);
+    }
+    if (operator === "minus") {
+        return subtract(num1, num2);
+    }
+    if (operator === "multiply") {
+        return multiply(num1, num2);
+    }
+    if (operator === "divide") {
+        return divide(num1, num2);
+    }
+}
+
+console.log(operate(5, 6, "multiply"));
